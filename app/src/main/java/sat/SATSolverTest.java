@@ -74,8 +74,8 @@ public class SATSolverTest {
 
         System.out.println("SAT solver starts!!!");
         long started = System.nanoTime();
-        //Environment env = SATSolver.solve(formula); // Environment env = SATSolver.solve(makeFm(makeCl(a,b)) );
-        Environment env = SATSolver.solve(makeFm(makeCl(a,b)) );
+        Environment env = SATSolver.solve(formula);
+        //Environment env = SATSolver.solve(makeFm(makeCl(a,b)) ); // for testing only.
         long time = System.nanoTime();
         long timeTaken= time - started;
         System.out.println("Time:" + timeTaken/1000000.0 + "ms");
