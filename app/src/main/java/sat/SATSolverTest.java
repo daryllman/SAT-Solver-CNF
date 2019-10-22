@@ -88,13 +88,13 @@ public class SATSolverTest {
                 String nameOfOutputFile = "BoolAssignment.txt";
                 FileWriter fw = new FileWriter(yourFilePath + nameOfOutputFile);
                 PrintWriter output = new PrintWriter(fw);
-                for (int varNum = 1; varNum <= numOfVar; varNum++) {
-                    Bool bool = env.get(new Variable(Integer.toString(varNum))); // get the boolean values of the variables from the env
+                for (int ivar = 1; ivar <= numOfVar; ivar++) {
+                    Bool bool = env.get(new Variable(Integer.toString(ivar))); // get the boolean values of the variables from the env
                     if (bool == Bool.TRUE) {
-                        output.println(Integer.toString(varNum) + ":TRUE");
+                        output.println(Integer.toString(ivar) + ":TRUE");
                     }
                     else { // if (bool == Bool.FALSE)
-                        output.println(Integer.toString(varNum) + ":FALSE");
+                        output.println(Integer.toString(ivar) + ":FALSE");
                     }
                 }
                 output.close();
